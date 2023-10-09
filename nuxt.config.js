@@ -105,6 +105,21 @@ export default {
           drop_console: false
         }
       }
+    },
+    extend(config, {}) {
+      config.node = {
+          fs: 'empty',
+          module: 'empty'
+      };
+      config.module.rules.push(
+        {
+          test: /\.mjs$/,
+          include: /node_modules/,
+          use: {
+            loader: "babel-loader"
+          }
+        }
+      )
     }
   },
 
@@ -121,5 +136,6 @@ export default {
       max: 100,
       ttl: 60
     }
-  }
+  },
+
 }

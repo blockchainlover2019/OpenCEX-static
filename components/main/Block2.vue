@@ -11,10 +11,32 @@
         <p class="text2">We took care of your convenience</p>
         <p class="text3">Light interface for quick purchases and professional exchange interface for large-scale trading.</p>
       </div>
+      
+      <div class="block2-back-lottie">
+          <lottie :options="backgroundLottieOptions"/>
+      </div>
     </div>
   </div>
 </template>
 
+<script>
+
+import BackgroundLottie from "../../static/assets/animation_smooth_back.json"
+import lottie from 'vue-lottie/src/lottie.vue'
+
+export default {
+  props: ['course'],
+  components: {
+    lottie
+  },
+  data() {
+    return {
+      backgroundLottieOptions: { animationData: BackgroundLottie, loop: true },
+    }
+  },
+}
+
+</script>
 <style>
 .block2 {
   padding: 173px 0 130px;
@@ -24,6 +46,14 @@ body h2 {
   font-size: 60px;
   font-weight: 700;
 }
+.block2-back-lottie {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  opacity: 0.3;
+}
+
 .text1 {
   font-size: 24px;
   line-height: 1.4;

@@ -74,8 +74,8 @@ body {
 }
 
 .content {
-  width: 1400px;
-  max-width: 1540px;
+  padding-left: 80px;
+  padding-right: 80px;
   position: relative;
   margin: 0 auto;
 }

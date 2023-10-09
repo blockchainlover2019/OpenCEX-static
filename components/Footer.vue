@@ -6,8 +6,6 @@
           <div class="copyright">
             {{ new Date().getFullYear() }} © {{ this.$config.axios.title }} Exchange Crypto Investment Platform
           </div>
-          <div class="rights !mb-2">{{$t('built_by')}}</div>
-          <div class="rights">All Rights Reserved</div>
           <div class="footer__socials-container">
             <a
               v-if="this.$config.axios.facebook && this.$config.axios.facebook !== ''"
@@ -82,7 +80,6 @@
         <div class="footer-text">
           <div class="footer-text-title">Trade on the go with {{ this.$config.axios.title }}</div>
           <div class="footer-text-p">Get 24/7 chat support with our friendly customer agents at your service.</div>
-          <a href="/account/login" class="btn">Login</a>
         </div>
       </div>
     </div>
@@ -136,6 +133,7 @@ export default {
 .footer {
   padding: 65px 0 77px;
   border-top: 1px solid #D9D9D9;
+  background: #180010;
 }
 .footer-content-wrapper {
   display: flex;
@@ -146,7 +144,7 @@ export default {
 }
 .copyright {
   font-size: 15px;
-  color: #29292D;
+  color: lightgrey;
   margin-bottom: 13px;
 }
 .rights {
@@ -188,9 +186,11 @@ export default {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 21px;
+  color: white
 }
 .footer-text {
   width: 24%;
+  color: white
 }
 .footer-text-title {
   font-size: 18px;
